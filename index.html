@@ -1,21 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="utf-8">
+  <title>快速跳转页</title>
+  <style>
+    body { text-align: center; padding: 20px; font-family: Arial; }
+    button { padding: 10px 20px; background: #07c160; color: white; border: none; border-radius: 5px; }
+  </style>
 </head>
-
+<body>
+  <h1>点击跳转小程序</h1>
+  <button onclick="jumpToMiniProgram()">立即跳转</button>
+  
+  <script>
+    function jumpToMiniProgram() {
+      // 替换为你的 URL Scheme
+      window.location.href = '#小程序://心委之家/cal8ZMF0zK8OPUB';
+      
+      // 跳转失败提示
+      setTimeout(() => {
+        alert("跳转失败，请返回微信内打开链接！");
+      }, 1000);
+    }
+  </script>
 </body>
-<script>
-  // 直接尝试跳转小程序
-  window.location.href = '#小程序://心委之家/cal8ZMF0zK8OPUB';
-
-  // 若跳转失败，提示用户手动操作
-  setTimeout(function () {
-    alert("跳转失败，请返回微信手动打开！");
-  }, 1000);
-</script>
-
 </html>
